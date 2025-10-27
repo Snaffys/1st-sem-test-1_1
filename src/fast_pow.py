@@ -1,4 +1,4 @@
-def fastPow(number, power):
+def fast_pow(number, power):
     if (not isinstance(number, int)):
         printf("Error: number is not an integer!")
         return None
