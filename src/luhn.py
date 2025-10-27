@@ -25,3 +25,30 @@ def luhn_check(card_number):
 
     return (total + control) % 10 == 0
 
+
+def main():
+    print("Enter card number to check validity")
+    print("Enter '-1' to exit")
+
+    while True:
+        user_input = input("\nEnter card number: ").strip()
+
+        if user_input == "-1":
+            break
+
+        if not user_input:
+            print("Empty input!")
+            continue
+
+        result = luhn_check(user_input)
+            
+        if result is None:
+            continue
+        elif result:
+            print("correct")
+        else:
+            print("incorrect")
+
+if __name__ == "__main__":
+    main()
+    
