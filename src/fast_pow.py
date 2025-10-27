@@ -1,8 +1,7 @@
 def fast_pow(number, power):
-    if not isinstance(number, int):
-        if not isinstance(number, float):
-            print("Error: number is not an integer!")
-            return None
+    if (not isinstance(number, int)) and (not isinstance(number, float)):
+        print("Error: number is not an integer!")
+        return None
     if not isinstance(power, int):
         print("Error: power is not an integer!")
         return None
@@ -14,6 +13,12 @@ def fast_pow(number, power):
         return 1
     if power == 1:
         return number
+
+    if number == 0:
+        if power > 0:
+            return 0
+        print("undefined")
+        return 0
 
     result = 1
     base = number
