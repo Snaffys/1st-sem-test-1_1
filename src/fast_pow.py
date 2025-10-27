@@ -1,6 +1,9 @@
 def fastPow(number, power):
+    if (not isinstance(number, int)):
+        printf("Error: number is not an integer!")
+        return None
     if (not isinstance(power, int)):
-        printf("Error: not an integer!")
+        printf("Error: power is not an integer!")
         return None
     if power < 0:
         printf("Error: negative value!")
