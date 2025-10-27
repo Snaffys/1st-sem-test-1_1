@@ -1,7 +1,8 @@
 def fast_pow(number, power):
     if not isinstance(number, int):
-        print("Error: number is not an integer!")
-        return None
+        if not isinstance(number, float):
+            print("Error: number is not an integer!")
+            return None
     if not isinstance(power, int):
         print("Error: power is not an integer!")
         return None
