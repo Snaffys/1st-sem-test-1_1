@@ -14,11 +14,9 @@ def fast_pow(number, power):
     if power == 1:
         return number
 
-    if number == 0:
-        if power > 0:
-            return 0
-        print("undefined")
-        return 0
+    if number == 0 and power == 0:
+        print("Error: 0 to the power of 0 is undefined!")
+        return None
 
     result = 1
     base = number
