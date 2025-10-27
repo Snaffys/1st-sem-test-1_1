@@ -1,4 +1,13 @@
 def fastPow(number, power):
+    if (not isinstance(power, int)):
+        printf("Error: not an integer!")
+        return None
+    
+    if power < 0:
+        printf("Error: negative value!")
+        return None
+
+    
     result = 1
     base = number
 
