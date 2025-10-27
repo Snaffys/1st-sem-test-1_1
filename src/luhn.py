@@ -1,5 +1,6 @@
 def luhn_check(card_number):
-    digits = [int(d) for d in str(card_number) if d.isdigit()]
+    card_number_str = str(card_number).replace(" ", "")
+    digits = [int(d) for d in card_number_str if d.isdigit()]
     control = digits.pop()
 
     parity = (len(digits) + 1) % 2
